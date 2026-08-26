@@ -10,47 +10,41 @@ public class PersonEntity {
 	public PersonEntity() {
 		
 	}
-	
-	public PersonEntity(String name,String ssn,String address,String phone) {
-		this.name=name;
+
+	public PersonEntity(String name, String ssn, String address, String phone) {
+//		this.name = name;
+//		this.ssn = ssn;
+//		this.address = address;
+//		this.phone = phone;
+		setName(name);
 		setSsn(ssn);
-		this.address=address;
-		this.phone=phone;
+		setAddress(address);
+		setPhone(phone);
 	}
 
 	public String getName() {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 	public char getGender() {
 		return gender;
 	}
 
-
-
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-
-
 
 	public String getSsn() {
 		return ssn;
 	}
 
-
-
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
-		//030303-3543232
+		//0508071345897
 		char genderNum = ssn.charAt(6);
 		if(genderNum == '1' || genderNum == '3') {
 			setGender('남');
@@ -59,35 +53,21 @@ public class PersonEntity {
 		}
 	}
 
-
-
 	public String getAddress() {
 		return address;
 	}
-
-
 
 	public void setAddress(String address) {
 		this.address = address;
 	}
 
-
-
 	public String getPhone() {
 		return phone;
 	}
 
-
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+		
 
 }
